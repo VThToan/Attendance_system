@@ -50,12 +50,13 @@ void ClassRoom::display(const vector<Lecturer>& allLecturers, const vector<Stude
     // Hiển thị giảng viên với tên đầy đủ
     cout << "Lecturer:\n";
     if (lecturers.empty()) {
-        cout << "  (Hasn't Lecturer)\n";
+        cout << "  Has not Lecturer\n";
     }
     else {
+        cout << "No " << "Id " << "\t   Name" << setw(30) << "\t\tEmail" << endl;
         for (int i = 0; i < lecturers.size(); i++) {
-            string lecturerName = "No found name";
-            string lecturerEmail = "No email";
+            string lecturerName = "";
+            string lecturerEmail = "";
             // Tìm thông tin giảng viên từ danh sách allLecturers
             for (int j = 0; j < allLecturers.size(); j++) {
                 if (allLecturers[j].lecturerId == lecturers[i]) {
@@ -70,14 +71,15 @@ void ClassRoom::display(const vector<Lecturer>& allLecturers, const vector<Stude
     }
 
     // Hiển thị sinh viên với tên đầy đủ
-    cout << "Student (" << students.size() << " ):\n";
+    cout << "Student (" << students.size() << "):\n";
     if (students.empty()) {
-        cout << "  (Has not student)\n";
+        cout << "  Has not student\n";
     }
     else {
+        cout << "No " << "Id " << "\t   Name" << setw(30) << "\t\tEmail" << endl;
         for (int i = 0; i < students.size(); i++) {
-            string studentName = "No found name";
-            string studentEmail = "No email";
+            string studentName = "";
+            string studentEmail = "";
             // Tìm thông tin sinh viên từ danh sách allStudents
             for (int j = 0; j < allStudents.size(); j++) {
                 if (allStudents[j].studentId == students[i]) {
