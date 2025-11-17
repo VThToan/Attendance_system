@@ -27,11 +27,11 @@ public:
     void viewAccountUser(const vector<Lecturer>& lecturersDB, const vector<Student>& studentsDB)
     {
         cout << "\n--- Lecturers ---\n";
-        for (size_t i = 0; i < lecturersDB.size(); i++) {
+        for (int i = 0; i < lecturersDB.size(); i++) {
             cout << (i + 1) << ") " << lecturersDB[i].lecturerId << " - " << lecturersDB[i].fullName << endl;
         }
         cout << "\n--- Students ---\n";
-        for (size_t i = 0; i < studentsDB.size(); i++) {
+        for (int i = 0; i < studentsDB.size(); i++) {
             cout << (i + 1) << ") " << studentsDB[i].studentId << " - " << studentsDB[i].fullName << endl;
         }
     }
@@ -89,7 +89,7 @@ public:
             string id;
             cout << "Enter Lecturer ID to edit: ";
             cin >> id;
-            size_t i;
+            int i;
             bool found = false;
             for (i = 0; i < lecturersDB.size(); i++)
             {
@@ -142,7 +142,7 @@ public:
             string id;
             cout << "Enter Student ID to edit: ";
             cin >> id;
-            size_t i;
+            int i;
             bool found = false;
             for (i = 0; i < studentsDB.size(); i++)
             {
@@ -211,7 +211,7 @@ public:
         cout << "Enter Class ID to edit: ";
         string cid;
         cin >> cid;
-        size_t i;
+        int i;
         bool found = false;
         for (i = 0; i < classesDB.size(); i++)
         {
@@ -245,7 +245,7 @@ public:
         string cid;
         cin >> cid;
         int classIndex = -1;
-        for (size_t i = 0; i < classesDB.size(); i++)
+        for (int i = 0; i < classesDB.size(); i++)
         {
             if (classesDB[i].classId == cid)
             {
@@ -272,7 +272,7 @@ public:
             string lid;
             cin >> lid;
             bool exists = false;
-            for (size_t i = 0; i < lecturersDB.size(); i++)
+            for (int i = 0; i < lecturersDB.size(); i++)
             {
                 if (lecturersDB[i].lecturerId == lid)
                 {
@@ -293,7 +293,7 @@ public:
             string sid;
             cin >> sid;
             bool exists = false;
-            for (size_t i = 0; i < studentsDB.size(); i++)
+            for (int i = 0; i < studentsDB.size(); i++)
             {
                 if (studentsDB[i].studentId == sid)
                 {
@@ -324,7 +324,7 @@ public:
             return;
         }
         f << "lecturerId,fullName,email,phone,password\n";
-        for (size_t i = 0; i < lecturersDB.size(); i++)
+        for (int i = 0; i < lecturersDB.size(); i++)
         {
             f << lecturersDB[i].lecturerId << "," << lecturersDB[i].fullName << "," << lecturersDB[i].email << ","
                 << lecturersDB[i].phoneNumber << "," << lecturersDB[i].password << "\n";
@@ -341,7 +341,7 @@ public:
             return;
         }
         f << "studentId,fullName,email,phone,password\n";
-        for (size_t i = 0; i < studentsDB.size(); i++)
+        for (int i = 0; i < studentsDB.size(); i++)
         {
             f << studentsDB[i].studentId << ","
                 << studentsDB[i].fullName << ","
@@ -411,7 +411,7 @@ public:
             return;
         }
         f << "classId,className,lecturerId,studentIds\n";
-        for (size_t i = 0; i < classesDB.size(); i++)
+        for (int i = 0; i < classesDB.size(); i++)
         {
             string lec = "";
             if (classesDB[i].lecturers.size() > 0)
@@ -419,7 +419,7 @@ public:
                 lec = classesDB[i].lecturers[0];
             }
             string stuJoined = "";
-            for (size_t j = 0; j < classesDB[i].students.size(); j++)
+            for (int j = 0; j < classesDB[i].students.size(); j++)
             {
                 stuJoined += classesDB[i].students[j];
                 if (j + 1 < classesDB[i].students.size())
@@ -482,7 +482,7 @@ public:
             cin >> lecturerId;
 
             bool found = false;
-            for (size_t i = 0; i < lecturersDB.size(); i++) {
+            for (int i = 0; i < lecturersDB.size(); i++) {
                 if (lecturersDB[i].lecturerId == lecturerId) {
                     found = true;
                     string newPassword;
@@ -507,7 +507,7 @@ public:
             cin >> studentId;
 
             bool found = false;
-            for (size_t i = 0; i < studentsDB.size(); i++) {
+            for (int i = 0; i < studentsDB.size(); i++) {
                 if (studentsDB[i].studentId == studentId) {
                     found = true;
                     string newPassword;
