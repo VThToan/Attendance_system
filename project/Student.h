@@ -14,7 +14,7 @@ public:
     string email;
     string phoneNumber;
     string password;
-
+    //cóntructor
     Student(string sid = "student", string fn = "Student", string em = "student@mail.com", string pn = "012345", string pw = "123")
         : studentId(sid), fullName(fn), email(em), phoneNumber(pn), password(pw) {
     }
