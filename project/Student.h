@@ -23,10 +23,10 @@ public:
     void selfAttendance(vector<AttendanceRecord>& attendanceDB, const vector<ClassRoom>& classesDB) const
     {
         vector<int> myClasses;
-        for (size_t i = 0; i < classesDB.size(); i++)
+        for (int i = 0; i < classesDB.size(); i++)
         {
             bool belong = false;
-            for (size_t j = 0; j < classesDB[i].students.size(); j++) {
+            for (int j = 0; j < classesDB[i].students.size(); j++) {
                 if (classesDB[i].students[j] == studentId)
                 {
                     belong = true;
@@ -44,7 +44,7 @@ public:
             return;
         }
         cout << "Select class: \n";
-        for (size_t k = 0; k < myClasses.size(); k++)
+        for (int k = 0; k < myClasses.size(); k++)
         {
             cout << (k + 1) << ") " << classesDB[myClasses[k]].classId << " - " << classesDB[myClasses[k]].className << endl;
         }
@@ -67,7 +67,7 @@ public:
     void viewAttendanceHistory(const vector<AttendanceRecord>& attendanceDB) const
     {
         cout << "\nMy attendance history:\n";
-        for (size_t i = 0; i < attendanceDB.size(); i++)
+        for (int i = 0; i < attendanceDB.size(); i++)
         {
             if (attendanceDB[i].studentId == studentId)
             {
