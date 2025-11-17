@@ -74,7 +74,7 @@ public:
         {
             if (attendanceDB[i].studentId == studentId)
             {
-              
+               cout << "Class: " << attendanceDB[i].classId << ", Status: " << attendanceDB[i].status << endl;
             }
         }
     }
