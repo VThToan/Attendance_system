@@ -6,7 +6,7 @@
 #include "Student.h"
 #include "Class.h"
 #include "AttendanceRecord.h"
-#inchlude "iomanip"
+#include "iomanip"
 #include <locale>
 #include <codecvt> // cần cho xử lý Unicode
 using namespace std;
