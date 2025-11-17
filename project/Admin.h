@@ -123,6 +123,13 @@ public:
                 {
                     lecturersDB[i].phoneNumber = ph;
                 }
+                cout << "New userName (ID) (leave empty to skip): ";
+				string un;
+				getline(cin, un);
+				if (un.size() > 0)
+				{
+					lecturersDB[i].lecturerId = un;
+				}    
                 cout << "New password (leave empty to skip): ";
                 string pw;
                 getline(cin, pw);
@@ -176,6 +183,13 @@ public:
                 {
                     studentsDB[i].phoneNumber = ph;
                 }
+                cout << "new userName (ID) (leave empty to skip): ";
+				string un;
+				getline(cin, un);
+				if (un.size() > 0)
+				{
+					studentsDB[i].studentId = un;
+				}
                 cout << "New password (leave empty to skip): ";
                 string pw;
                 getline(cin, pw);
