@@ -1,3 +1,17 @@
+/* 
+    admin gồm có 5 thuộc tính
+    và danh sách các hàm: 
++ hàm xem danh sách giảng viên & sinh viên
++ tạo tài khoản 
++ hàm chỉnh sửa thong tin
++ hàm tạo lớp 
++ hàm chỉnh sửa lớp 
++ hàm thêm user vào lớp 
++ hàm lưu dữ liệu gv&sv vào file
++ hàm load dữ liệu gv& sv từ file 
++ hàm lưu lớp đã tạo vào file 
++ hàm load lớp đã tạo từ file 
+  */
 #pragma once
 #include <string>
 #include <vector>
