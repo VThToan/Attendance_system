@@ -10,7 +10,7 @@ class Student;
 
 using namespace std;
 
-
+// Lớp đại diện cho một lớp học
 class ClassRoom {
 public:
     string classId;
@@ -56,7 +56,7 @@ public:
         }
         lecturers = tmp;
     }
-
+ // Xóa sinh viên khỏi lớp
     void removeStudent(const string& sid)
     {
         vector<string> tmp;
